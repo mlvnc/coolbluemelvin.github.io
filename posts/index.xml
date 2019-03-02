@@ -22,7 +22,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 <p>Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using <a href="https://app.wercker.com/melvincornelissen/mlvn.io/installing/">Wercker</a>.</p>
 
-<h1 id="prerequisites">Prerequisites</h1>
+<h2 id="prerequisites">Prerequisites</h2>
 
 <ul>
 <li>Github Repository for the Hugo files</li>
@@ -31,14 +31,14 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <li><a href="https://app.wercker.com/">Wercker</a> account</li>
 </ul>
 
-<h2 id="optional">Optional</h2>
+<h3 id="optional">Optional</h3>
 
 <ul>
 <li>Github Repository for the Wercker buildstep</li>
 <li><a href="https://www.codacy.com/">Codacy</a> account</li>
 </ul>
 
-<h1 id="wercker-build-step">Wercker build step</h1>
+<h2 id="wercker-build-step">Wercker build step</h2>
 
 <p>Within Wercker there are several build steps already created which you can use for deploying to Github Pages. I however decided to build my own in order to have more control over the script actually running the deployment. You&rsquo;ll need a Github Repository with the following files to build and deploy your own build steps.</p>
 
@@ -52,7 +52,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 <p>In case you&rsquo;re interested, my build step can be found in this <a href="https://github.com/coolbluemelvin/wercker-step-gh-pages">Github Repository</a></p>
 
-<h1 id="deployment">Deployment</h1>
+<h2 id="deployment">Deployment</h2>
 
 <p>The wercker.yml file:</p>
 <div class="highlight"><pre class="chroma"><code class="language-yaml" data-lang="yaml">box<span class="p">:</span><span class="w"> </span>debian<span class="w">
