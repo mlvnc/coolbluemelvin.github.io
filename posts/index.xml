@@ -85,7 +85,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 </span><span class="w">        </span>path<span class="p">:</span><span class="w"> </span>public</code></pre></div>
 
     <figure class="center" >
-        <img src="/images/wercker.png"  alt="wercker"   style="border-radius: 8px;"  />
+        <img src="/images/wercker.png"  alt="wercker"   style="border-radius: 6px;"  />
 
         
     </figure>
@@ -94,7 +94,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 
     <figure class="center" >
-        <img src="/images/wercker-build.png"  alt="wercker-build"   style="border-radius: 8px;"  />
+        <img src="/images/wercker-build.png"  alt="wercker-build"   style="border-radius: 6px;"  />
 
         
     </figure>
@@ -103,7 +103,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 
     <figure class="center" >
-        <img src="/images/wercker-deploy.png"  alt="wercker-deploy"   style="border-radius: 8px;"  />
+        <img src="/images/wercker-deploy.png"  alt="wercker-deploy"   style="border-radius: 6px;"  />
 
         
     </figure>
@@ -112,7 +112,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 
     <figure class="center" >
-        <img src="/images/codacy.png"  alt="codacy"   style="border-radius: 8px;"  />
+        <img src="/images/codacy.png"  alt="codacy"   style="border-radius: 6px;"  />
 
         
     </figure>
@@ -121,7 +121,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 
     <figure class="center" >
-        <img src="/images/codacy-checks.png"  alt="codacy-checks"   style="border-radius: 8px;"  />
+        <img src="/images/codacy-checks.png"  alt="codacy-checks"   style="border-radius: 6px;"  />
 
         
     </figure>
@@ -130,7 +130,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 
     <figure class="center" >
-        <img src="/images/codacy-overview.png"  alt="codacy-overview"   style="border-radius: 8px;"  />
+        <img src="/images/codacy-overview.png"  alt="codacy-overview"   style="border-radius: 6px;"  />
 
         
     </figure>
