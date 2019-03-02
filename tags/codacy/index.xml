@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codacy on Hi! I&#39;m Melvin</title>
+    <link>/tags/codacy/</link>
+    <description>Recent content in Codacy on Hi! I&#39;m Melvin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Sat, 02 Mar 2019 19:15:26 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/codacy/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Hugo, Wercker and Github Pages</title>
+      <link>/posts/2019/03/hugo-wercker-and-github-pages/</link>
+      <pubDate>Sat, 02 Mar 2019 19:15:26 +0100</pubDate>
+      
+      <guid>/posts/2019/03/hugo-wercker-and-github-pages/</guid>
+      <description>Recently I&amp;rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&amp;rsquo;s not the way to go so instead I&amp;rsquo;ve been building a deployment pipeline using Wercker.
+Prerequisites  Github Repository for the Hugo files Github Repository for the Github page (username.</description>
+    </item>
+    
+  </channel>
+</rss>
