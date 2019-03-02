@@ -48,7 +48,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 </span><span class="w">
 </span><span class="w">  </span>steps<span class="p">:</span><span class="w">
 </span><span class="w">    </span>-<span class="w"> </span>install-packages<span class="p">:</span><span class="w">
-</span><span class="w">        </span>packages<span class="p">:</span><span class="w"> </span>git<span class="w">
+</span><span class="w">        </span>packages<span class="p">:</span><span class="w"> </span>git<span class="w"> </span>curl<span class="w">
 </span><span class="w">    </span>-<span class="w"> </span>script<span class="p">:</span><span class="w">
 </span><span class="w">        </span>name<span class="p">:</span><span class="w"> </span>download<span class="w"> </span>hugo<span class="w"> </span>theme<span class="w">
 </span><span class="w">        </span>cwd<span class="p">:</span><span class="w"> </span>themes/<span class="w">
@@ -61,7 +61,9 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 </span><span class="w">
 </span><span class="w"></span>deploy<span class="p">:</span><span class="w">
 </span><span class="w">  </span>steps<span class="p">:</span><span class="w">
-</span><span class="w">    </span>-<span class="w"> </span>uetchy/gh-pages<span class="p">:</span><span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>install-packages<span class="p">:</span><span class="w">
+</span><span class="w">        </span>packages<span class="p">:</span><span class="w"> </span>git<span class="w"> </span>curl<span class="w">
+</span><span class="w">    </span>-<span class="w"> </span>melvincornelissen/gh-pages<span class="p">:</span><span class="w">
 </span><span class="w">        </span>token<span class="p">:</span><span class="w"> </span>$GIT_TOKEN<span class="w">
 </span><span class="w">        </span>domain<span class="p">:</span><span class="w"> </span>mlvn.io<span class="w">
 </span><span class="w">        </span>repo<span class="p">:</span><span class="w"> </span>coolbluemelvin/coolbluemelvin.github.io<span class="w">
