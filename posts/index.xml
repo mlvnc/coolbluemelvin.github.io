@@ -34,6 +34,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <h2 id="optional">Optional</h2>
 
 <ul>
+<li>Github Repository for the Wercker buildstep</li>
 <li><a href="https://www.codacy.com/">Codacy</a> account</li>
 </ul>
 
