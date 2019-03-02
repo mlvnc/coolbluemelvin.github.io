@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jamf on Hi! I&#39;m Melvin</title>
+    <link>/tags/jamf/</link>
+    <description>Recent content in Jamf on Hi! I&#39;m Melvin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 01 Mar 2019 14:32:10 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/jamf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jamf meets Splunk</title>
+      <link>/posts/2019/03/jamf-meets-splunk/</link>
+      <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
+      
+      <guid>/posts/2019/03/jamf-meets-splunk/</guid>
+      <description>Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by a SplunkForwarder.
+The script that&amp;rsquo;s performing the API call is the following.</description>
+    </item>
+    
+    <item>
+      <title>Jamf Self Service and Win10 VMs</title>
+      <link>/posts/2019/03/jamf-self-service-and-win10-vms/</link>
+      <pubDate>Fri, 01 Mar 2019 13:57:04 +0100</pubDate>
+      
+      <guid>/posts/2019/03/jamf-self-service-and-win10-vms/</guid>
+      <description> Auto install Win 10 VBox VM&amp;rsquo;s through Jamf self service </description>
+    </item>
+    
+    <item>
+      <title>Rename machine script</title>
+      <link>/posts/2019/02/rename-machine-script/</link>
+      <pubDate>Thu, 28 Feb 2019 19:53:04 +0100</pubDate>
+      
+      <guid>/posts/2019/02/rename-machine-script/</guid>
+      <description>This post is to test the PrismJS syntax highlighting.
+#!/bin/bash  ##################### ##### Variables ##### ##################### # $LDAP_HOST = ldap host (jamf parameter 4) # $LDAP_PASSWORD = ldap password (jamf parameter 5) # $LDAP_USER = ldap user (jamf parameter 6) # $OU (jamf parameter 7) # $API_USER (jamf parameter 8) # $API_PASSWORD (jamf parameter 9) ############################ ##### Script Variables ##### ############################ # $EXISTING_RECORDS = an LDAP query to get all existing records.</description>
+    </item>
+    
+  </channel>
+</rss>

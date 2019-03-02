@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Api on Hi! I&#39;m Melvin</title>
+    <link>/tags/api/</link>
+    <description>Recent content in Api on Hi! I&#39;m Melvin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Fri, 01 Mar 2019 14:32:10 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/api/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jamf meets Splunk</title>
+      <link>/posts/2019/03/jamf-meets-splunk/</link>
+      <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
+      
+      <guid>/posts/2019/03/jamf-meets-splunk/</guid>
+      <description>Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by a SplunkForwarder.
+The script that&amp;rsquo;s performing the API call is the following.</description>
+    </item>
+    
+  </channel>
+</rss>

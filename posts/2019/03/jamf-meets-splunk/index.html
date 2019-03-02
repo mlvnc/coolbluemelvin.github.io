@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="author" content="Melvin Cornelissen ">
+<meta name="description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by a SplunkForwarder.
+The script that&amp;rsquo;s performing the API call is the following."/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="/posts/2019/03/jamf-meets-splunk/" />
+
+
+    <title>
+        
+            Jamf meets Splunk :: Hi! I&#39;m Melvin 
+        
+    </title>
+
+
+
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet" type="text/css">
+
+
+<link rel="stylesheet" href="/scss/main.min.099699ab246bf26f50616f7c9f00c79d46110459d1bd727b2d07d6fc09ece082.css">
+
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+<link rel="shortcut icon" href="/favicon.ico">
+
+<meta itemprop="name" content="Jamf meets Splunk">
+<meta itemprop="description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.
+The script that&rsquo;s performing the API call is the following.">
+
+
+<meta itemprop="datePublished" content="2019-03-01T14:32:10&#43;01:00" />
+<meta itemprop="dateModified" content="2019-03-02T16:34:34&#43;01:00" />
+<meta itemprop="wordCount" content="366">
+
+
+
+<meta itemprop="keywords" content="Splunk,Jamf,powershell,api," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="/"/>
+
+<meta name="twitter:title" content="Jamf meets Splunk"/>
+<meta name="twitter:description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.
+The script that&rsquo;s performing the API call is the following."/>
+
+
+
+<meta property="article:published_time" content="2019-03-01 14:32:10 &#43;0100 &#43;0100" />
+
+
+
+
+
+
+
+
+
+    </head>
+
+    <body class="dark-theme">
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">cd ~/</span>
+            <span class="logo__cursor"></span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/about">About</a></li><li><a href="/posts">Posts</a></li><li><a href="/tags/">Tags</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+
+            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+  3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+  13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+</svg>
+</span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
+
+            
+
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="/posts/2019/03/jamf-meets-splunk/">Jamf meets Splunk</a></h2>
+
+            
+
+            <div class="post-content">
+                
+
+<h3 id="jamf-metrics-to-splunkenterprise">Jamf metrics to SplunkEnterprise</h3>
+
+<p>Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.</p>
+
+<p>The script that&rsquo;s performing the API call is the following.</p>
+<div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c">#gather all enrolled computers</span>
+<span class="k">function</span> <span class="n">Jamf_API_call</span> <span class="p">{</span>
+<span class="nv">$headers</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="s2">&#34;System.Collections.Generic.Dictionary[[String],[String]]&#34;</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&#34;Accept&#34;</span><span class="p">,</span> <span class="s1">&#39;application/json;version=24&#39;</span><span class="p">)</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&#34;Authorization&#34;</span><span class="p">,</span> <span class="s1">&#39;Basic $jamf_api_auth&#39;</span><span class="p">)</span>
+
+<span class="nv">$data</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="s2">&#34;https://$jamf_url/JSSResource/computers&#34;</span> <span class="n">-Headers</span> <span class="nv">$headers</span> <span class="n">-OutFile</span> <span class="n">jamf</span><span class="p">.</span><span class="n">json</span>
+<span class="nv">$data</span> <span class="p">=</span> <span class="nb">get-content</span> <span class="n">jamf</span><span class="p">.</span><span class="n">json</span> <span class="p">|</span> <span class="nb">convertfrom-json</span>
+
+<span class="nv">$script:macOS_jamf</span> <span class="p">=</span> <span class="nv">$data</span><span class="p">.</span><span class="n">computers</span><span class="p">.</span><span class="n">id</span>
+<span class="p">}</span>
+
+<span class="c">#grep General, Hardware, Location and extension_attributes data per computer and add to the log</span>
+<span class="k">function</span> <span class="n">Jamf_DATA</span> <span class="p">{</span>
+<span class="k">Foreach</span> <span class="p">(</span><span class="nv">$id</span> <span class="k">in</span> <span class="nv">$macOS_jamf</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="nv">$headers</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="s2">&#34;System.Collections.Generic.Dictionary[[String],[String]]&#34;</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&#34;Accept&#34;</span><span class="p">,</span> <span class="s1">&#39;application/json;version=24&#39;</span><span class="p">)</span>
+<span class="nv">$headers</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="s2">&#34;Authorization&#34;</span><span class="p">,</span> <span class="s1">&#39;Basic $jamf_api_auth&#39;</span><span class="p">)</span>
+<span class="nv">$mac_data</span> <span class="p">=</span> <span class="nb">Invoke-RestMethod</span> <span class="s2">&#34;https://$jamf_url/JSSResource/computers/id/$id/subset/General&amp;Hardware&amp;Location&amp;extensionattributes&#34;</span> <span class="n">-Headers</span> <span class="nv">$headers</span> <span class="n">-OutFile</span> <span class="n">jamf-out</span><span class="p">.</span><span class="n">json</span>
+<span class="nv">$mac_data_new</span> <span class="p">=</span> <span class="nb">get-content</span> <span class="n">jamf-out</span><span class="p">.</span><span class="n">json</span>
+<span class="nv">$date</span> <span class="p">=</span> <span class="nb">Get-Date</span>
+<span class="s2">&#34;$date $mac_data_new&#34;</span> <span class="p">|</span> <span class="nb">Out-File</span> <span class="n">-Append</span> <span class="p">/</span><span class="n">var</span><span class="p">/</span><span class="n">log</span><span class="p">/</span><span class="n">jamf</span><span class="p">/</span><span class="n">jamf-monitor</span>
+<span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Jamf_API_call</span>
+<span class="n">Jamf_DATA</span></code></pre></div>
+<p>First we are gathering all enrolled machines using <code>$data = Invoke-RestMethod &quot;https://$jamf_url/JSSResource/computers&quot; -Headers $headers -OutFile jamf.json</code>. That returns a file looking like:</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span><span class="nt">&#34;computers&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">148</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-l5e4&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">151</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-5vht&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">152</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-1f61&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">153</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-n86u&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">154</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-bmga&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">165</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-8vjj&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">166</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-9el8&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">168</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-cme4&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">169</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nllm-slr7&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">170</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-o9wm&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">171</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nllm-83em&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">172</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-da30&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">173</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-a9p2&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">174</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nllm-pviq&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">181</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-4o5x&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">184</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-iwn9&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">185</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-yr93&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">205</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nllm-el3h&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">210</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nllm-a4ri&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">211</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-hrzi (2)&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">212</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nllm-8vxm&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">221</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-3xsd&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">222</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-2i3l&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">224</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-9139&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">225</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-4g1t&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">226</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-z97e&#34;</span><span class="p">}]}</span></code></pre></div>
+<p>Then we convert that from json using <code>$data = get-content jamf.json | convertfrom-json</code> to put it into a variable with the computers ID per line. When we have that file we use it in the Jamf_DATA function and eventually end up with a log file containg the computers data as following (anonymised):</p>
+<div class="highlight"><pre class="chroma"><code class="language-json" data-lang="json"><span class="mi">03</span><span class="err">/</span><span class="mi">01</span><span class="err">/</span><span class="mi">2019</span> <span class="mi">15</span><span class="err">:</span><span class="mi">29</span><span class="err">:</span><span class="mi">08</span> <span class="p">{</span><span class="nt">&#34;computer&#34;</span><span class="p">:{</span><span class="nt">&#34;general&#34;</span><span class="p">:{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">226</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-z97e&#34;</span><span class="p">,</span><span class="nt">&#34;mac_address&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;alt_mac_address&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;ip_address&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;last_reported_ip&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;serial_number&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;udid&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;jamf_version&#34;</span><span class="p">:</span><span class="s2">&#34;10.9.0-t1544463445&#34;</span><span class="p">,</span><span class="nt">&#34;platform&#34;</span><span class="p">:</span><span class="s2">&#34;Mac&#34;</span><span class="p">,</span><span class="nt">&#34;barcode_1&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;barcode_2&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;asset_tag&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;remote_management&#34;</span><span class="p">:{</span><span class="nt">&#34;managed&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;management_username&#34;</span><span class="p">:</span><span class="s2">&#34;macadmin&#34;</span><span class="p">,</span><span class="nt">&#34;management_password_sha256&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">},</span><span class="nt">&#34;mdm_capable&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;mdm_capable_users&#34;</span><span class="p">:{</span><span class="nt">&#34;mdm_capable_user&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">},</span><span class="nt">&#34;management_status&#34;</span><span class="p">:{</span><span class="nt">&#34;enrolled_via_dep&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;user_approved_enrollment&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;user_approved_mdm&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">},</span><span class="nt">&#34;report_date&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01 09:49:19&#34;</span><span class="p">,</span><span class="nt">&#34;report_date_epoch&#34;</span><span class="p">:</span><span class="mi">1551433759204</span><span class="p">,</span><span class="nt">&#34;report_date_utc&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01T09:49:19.204+0000&#34;</span><span class="p">,</span><span class="nt">&#34;last_contact_time&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01 14:10:28&#34;</span><span class="p">,</span><span class="nt">&#34;last_contact_time_epoch&#34;</span><span class="p">:</span><span class="mi">1551449428195</span><span class="p">,</span><span class="nt">&#34;last_contact_time_utc&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01T14:10:28.195+0000&#34;</span><span class="p">,</span><span class="nt">&#34;initial_entry_date&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01&#34;</span><span class="p">,</span><span class="nt">&#34;initial_entry_date_epoch&#34;</span><span class="p">:</span><span class="mi">1551429401260</span><span class="p">,</span><span class="nt">&#34;initial_entry_date_utc&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01T08:36:41.260+0000&#34;</span><span class="p">,</span><span class="nt">&#34;last_cloud_backup_date_epoch&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;last_cloud_backup_date_utc&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;last_enrolled_date_epoch&#34;</span><span class="p">:</span><span class="mi">1551429428657</span><span class="p">,</span><span class="nt">&#34;last_enrolled_date_utc&#34;</span><span class="p">:</span><span class="s2">&#34;2019-03-01T08:37:08.657+0000&#34;</span><span class="p">,</span><span class="nt">&#34;distribution_point&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;sus&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;netboot_server&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;site&#34;</span><span class="p">:{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">-1</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;None&#34;</span><span class="p">},</span><span class="nt">&#34;itunes_store_account_is_active&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">},</span><span class="nt">&#34;location&#34;</span><span class="p">:{</span><span class="nt">&#34;username&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;realname&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;real_name&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;email_address&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;position&#34;</span><span class="p">:</span><span class="s2">&#34;Developer&#34;</span><span class="p">,</span><span class="nt">&#34;phone&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;phone_number&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;department&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;building&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;room&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">},</span><span class="nt">&#34;hardware&#34;</span><span class="p">:{</span><span class="nt">&#34;make&#34;</span><span class="p">:</span><span class="s2">&#34;Apple&#34;</span><span class="p">,</span><span class="nt">&#34;model&#34;</span><span class="p">:</span><span class="s2">&#34;13-inch MacBook Pro (Early 2015)&#34;</span><span class="p">,</span><span class="nt">&#34;model_identifier&#34;</span><span class="p">:</span><span class="s2">&#34;MacBookPro12,1&#34;</span><span class="p">,</span><span class="nt">&#34;os_name&#34;</span><span class="p">:</span><span class="s2">&#34;Mac OS X&#34;</span><span class="p">,</span><span class="nt">&#34;os_version&#34;</span><span class="p">:</span><span class="s2">&#34;10.14.3&#34;</span><span class="p">,</span><span class="nt">&#34;os_build&#34;</span><span class="p">:</span><span class="s2">&#34;18D42&#34;</span><span class="p">,</span><span class="nt">&#34;master_password_set&#34;</span><span class="p">:</span><span class="kc">false</span><span class="p">,</span><span class="nt">&#34;active_directory_status&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;service_pack&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;processor_type&#34;</span><span class="p">:</span><span class="s2">&#34;Intel Core i7&#34;</span><span class="p">,</span><span class="nt">&#34;processor_architecture&#34;</span><span class="p">:</span><span class="s2">&#34;x86_64&#34;</span><span class="p">,</span><span class="nt">&#34;processor_speed&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;processor_speed_mhz&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;number_processors&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;number_cores&#34;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="nt">&#34;total_ram&#34;</span><span class="p">:</span><span class="mi">16384</span><span class="p">,</span><span class="nt">&#34;total_ram_mb&#34;</span><span class="p">:</span><span class="mi">16384</span><span class="p">,</span><span class="nt">&#34;boot_rom&#34;</span><span class="p">:</span><span class="s2">&#34;180.0.0.0.0&#34;</span><span class="p">,</span><span class="nt">&#34;bus_speed&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;bus_speed_mhz&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;battery_capacity&#34;</span><span class="p">:</span><span class="mi">96</span><span class="p">,</span><span class="nt">&#34;cache_size&#34;</span><span class="p">:</span><span class="mi">4096</span><span class="p">,</span><span class="nt">&#34;cache_size_kb&#34;</span><span class="p">:</span><span class="mi">4096</span><span class="p">,</span><span class="nt">&#34;available_ram_slots&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;optical_drive&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;nic_speed&#34;</span><span class="p">:</span><span class="s2">&#34;10/100/1000&#34;</span><span class="p">,</span><span class="nt">&#34;smc_version&#34;</span><span class="p">:</span><span class="s2">&#34;2.28f7&#34;</span><span class="p">,</span><span class="nt">&#34;ble_capable&#34;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="nt">&#34;sip_status&#34;</span><span class="p">:</span><span class="s2">&#34;Enabled&#34;</span><span class="p">,</span><span class="nt">&#34;gatekeeper_status&#34;</span><span class="p">:</span><span class="s2">&#34;App Store and identified developers&#34;</span><span class="p">,</span><span class="nt">&#34;xprotect_version&#34;</span><span class="p">:</span><span class="s2">&#34;2101&#34;</span><span class="p">,</span><span class="nt">&#34;institutional_recovery_key&#34;</span><span class="p">:</span><span class="s2">&#34;Not Present&#34;</span><span class="p">,</span><span class="nt">&#34;disk_encryption_configuration&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;filevault2_users&#34;</span><span class="p">:[],</span><span class="nt">&#34;storage&#34;</span><span class="p">:[{</span><span class="nt">&#34;disk&#34;</span><span class="p">:</span><span class="s2">&#34;disk0&#34;</span><span class="p">,</span><span class="nt">&#34;model&#34;</span><span class="p">:</span><span class="s2">&#34;APPLE SSD SM0512G&#34;</span><span class="p">,</span><span class="nt">&#34;revision&#34;</span><span class="p">:</span><span class="s2">&#34;BXZ13A0Q&#34;</span><span class="p">,</span><span class="nt">&#34;serial_number&#34;</span><span class="p">:</span><span class="s2">&#34;xxx&#34;</span><span class="p">,</span><span class="nt">&#34;size&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;drive_capacity_mb&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;connection_type&#34;</span><span class="p">:</span><span class="s2">&#34;NO&#34;</span><span class="p">,</span><span class="nt">&#34;smart_status&#34;</span><span class="p">:</span><span class="s2">&#34;Verified&#34;</span><span class="p">,</span><span class="nt">&#34;partition&#34;</span><span class="p">:{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Macintosh HD (Boot Partition)&#34;</span><span class="p">,</span><span class="nt">&#34;size&#34;</span><span class="p">:</span><span class="mi">476902</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;boot&#34;</span><span class="p">,</span><span class="nt">&#34;partition_capacity_mb&#34;</span><span class="p">:</span><span class="mi">476902</span><span class="p">,</span><span class="nt">&#34;percentage_full&#34;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="nt">&#34;filevault_status&#34;</span><span class="p">:</span><span class="s2">&#34;Not Encrypted&#34;</span><span class="p">,</span><span class="nt">&#34;filevault_percent&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;filevault2_status&#34;</span><span class="p">:</span><span class="s2">&#34;Not Encrypted&#34;</span><span class="p">,</span><span class="nt">&#34;filevault2_percent&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;boot_drive_available_mb&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;lvgUUID&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;lvUUID&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;pvUUID&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">}},{</span><span class="nt">&#34;disk&#34;</span><span class="p">:</span><span class="s2">&#34;disk2&#34;</span><span class="p">,</span><span class="nt">&#34;model&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;revision&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;serial_number&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;size&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;drive_capacity_mb&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;connection_type&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;smart_status&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">,</span><span class="nt">&#34;partition&#34;</span><span class="p">:{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Google Chrome&#34;</span><span class="p">,</span><span class="nt">&#34;size&#34;</span><span class="p">:</span><span class="mi">195</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;other&#34;</span><span class="p">,</span><span class="nt">&#34;partition_capacity_mb&#34;</span><span class="p">:</span><span class="mi">195</span><span class="p">,</span><span class="nt">&#34;percentage_full&#34;</span><span class="p">:</span><span class="mi">100</span><span class="p">,</span><span class="nt">&#34;filevault_status&#34;</span><span class="p">:</span><span class="s2">&#34;Not Encrypted&#34;</span><span class="p">,</span><span class="nt">&#34;filevault_percent&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&#34;filevault2_status&#34;</span><span class="p">:</span><span class="s2">&#34;Not Encrypted&#34;</span><span class="p">,</span><span class="nt">&#34;filevault2_percent&#34;</span><span class="p">:</span><span class="mi">0</span><span class="p">}}],</span><span class="nt">&#34;mapped_printers&#34;</span><span class="p">:[{</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;xxx @ xxx&#34;</span><span class="p">,</span><span class="nt">&#34;uri&#34;</span><span class="p">:</span><span class="s2">&#34;ipp://xxx%20%40%xxx%E2%80%99s%20MacBook%20Pro._ipp._tcp.local./cups&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;Xerox WorkCentre 6605DN&#34;</span><span class="p">,</span><span class="nt">&#34;location&#34;</span><span class="p">:</span><span class="s2">&#34;Weena Copyroom 8A&#34;</span><span class="p">}]},</span><span class="nt">&#34;extension_attributes&#34;</span><span class="p">:[{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;coolblue-enrolled&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;3&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;coolblue-filevault&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;FileVault is Off.&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">4</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;coolblue-initial-hostname&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-z97e&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Host name&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;nldm-z97e&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Last User&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;R&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;Not Installed&#34;</span><span class="p">},{</span><span class="nt">&#34;id&#34;</span><span class="p">:</span><span class="mi">6</span><span class="p">,</span><span class="nt">&#34;name&#34;</span><span class="p">:</span><span class="s2">&#34;Uptime&#34;</span><span class="p">,</span><span class="nt">&#34;type&#34;</span><span class="p">:</span><span class="s2">&#34;String&#34;</span><span class="p">,</span><span class="nt">&#34;value&#34;</span><span class="p">:</span><span class="s2">&#34;10:49  up  1:06, 1 user, load averages: 2.13 1.67 1.48&#34;</span><span class="p">}]}}</span></code></pre></div>
+<p>The script is creating <code>/var/log/jamf/jamf-monitor</code> which is being monitored by the SplunkForwarder using the following inputs.conf.</p>
+
+<pre><code>[monitor:///var/log/jamf/jamf-monitor]
+index=production_jamf
+sourcetype=jamf
+disabled = false
+</code></pre>
+
+<p>Eventually we&rsquo;re pushing the data into an index in our Splunkcloud environment. Due to the fact we&rsquo;re pushing JSON through our SplunkForwarder we needed to create a new sourcetype and adjust adjust it for the JSON we&rsquo;re pushing to Splunk. The actual changes made are the following:</p>
+
+<pre><code>Indexed Extractions   none
+SEDCMD-strip_prefix   s/^[^{]+//g
+KV_MODE               json
+</code></pre>
+
+<p>This results in the following dashboard 🧐.</p>
+
+
+    <figure class="center" >
+        <img src="/images/jamf-to-splunk.png"  alt="Jamf "   style="border-radius: 8px;"  />
+
+        
+    </figure>
+
+
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/splunk">Splunk</a></span><span class="tag"><a href="/tags/jamf">Jamf</a></span><span class="tag"><a href="/tags/powershell">powershell</a></span><span class="tag"><a href="/tags/api">api</a></span>
+                </p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>366 Words</p>
+
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-01 13:32 &#43;0000</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/332758ba12a36ab4305806655add7e841572d4b3" target="_blank" rel="noopener">332758b</a> @ 2019-03-02</p>
+        </div>
+
+        
+            <div class="pagination">
+                <div class="pagination__title">
+                    <span class="pagination__title-h">Read other posts</span>
+                    <hr />
+                </div>
+
+                <div class="pagination__buttons">
+                    
+
+                    
+                        <span class="button next">
+                            <a href="/posts/2019/03/jamf-self-service-and-win10-vms/">
+                                <span class="button__text">Jamf Self Service and Win10 VMs</span>
+                                <span class="button__icon">→</span>
+                            </a>
+                        </span>
+                    
+                </div>
+            </div>
+        
+
+        
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2019</span>
+            
+                <span><a href="/">Melvin Cornelissen</a></span>
+            
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a></span>
+            <span> <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></span>
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+
+        </div>
+    </div>
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
+            <span>Made with &#10084; by <a href="https://github.com/rhazdon">rhazdon</a></span>
+        </div>
+    </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+
+
+<script type="text/javascript" src="/js/bundle.f65a6fe80656eb86fce3f1228faa2ac0bf43b28d21eb91975f036839ed92dfd126cabb91223501623641f4ea67ac5d03882d0b8c744da38c637a1fdf8e9016c6.js" integrity="sha512-9lpv6AZW64b84/Eij6oqwL9Dso0h65GXXwNoOe2S39EmyruRIjUBYjZB9OpnrF0DiC0LjHRNo4xjeh/fjpAWxg=="></script>
+
+
+
+    </body>
+</html>
