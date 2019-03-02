@@ -42,7 +42,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 <h2 id="wercker-build-step">Wercker build step</h2>
 
-<p>Within Wercker there are several build steps already created which you can use for deploying to Github Pages. I however decided to build my own in order to have more control over the script actually running the deployment. You&rsquo;ll need a Github Repository with the following files to build and deploy your own build steps.</p>
+<p>Within Wercker there are several build steps already created which you can use for deploying to Github Pages. I however decided to build my own based on uetchy/gh-pages in order to have more control over the script actually running the deployment. You&rsquo;ll need a Github Repository with the following files to build and deploy your own build steps.</p>
 
 <ul>
 <li>run.sh</li>
