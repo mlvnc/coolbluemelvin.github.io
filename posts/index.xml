@@ -38,6 +38,20 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <li><a href="https://www.codacy.com/">Codacy</a> account</li>
 </ul>
 
+<h1 id="wercker-build-step">Wercker build step</h1>
+
+<p>Within Wercker there are several build steps already created which you can use for deploying to Github Pages. I however decided to build my own in order to have more control over the script actually running the deployment. You&rsquo;ll need a Github Repository with the following files to build and deploy your own build steps.</p>
+
+<ul>
+<li>run.sh</li>
+<li>step.yml</li>
+<li>wercker.yml</li>
+</ul>
+
+<p>The <code>run.sh</code> will contain the script performing the deployment to Github Pages, <code>step.yml</code> contains the build step specific information like the name and all properties and last the <code>wercker.yml</code> file contains the build and deployment steps for the build step itself. The <code>wercker.yml</code> eventually pushes the step into the &ldquo;Steps Store&rdquo; in Wercker.</p>
+
+<p>In case you&rsquo;re interested, my build step can be found in this <a href="https://github.com/coolbluemelvin/wercker-step-gh-pages">Github Repository</a></p>
+
 <h1 id="deployment">Deployment</h1>
 
 <p>The wercker.yml file:</p>

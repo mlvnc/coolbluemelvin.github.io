@@ -41,8 +41,8 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 
 <meta itemprop="datePublished" content="2019-03-02T19:15:26&#43;01:00" />
-<meta itemprop="dateModified" content="2019-03-02T21:48:06&#43;01:00" />
-<meta itemprop="wordCount" content="106">
+<meta itemprop="dateModified" content="2019-03-02T22:01:51&#43;01:00" />
+<meta itemprop="wordCount" content="234">
 
 
 
@@ -114,7 +114,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
     <main class="post">
 
         <div class="post-info">
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>One minute
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clock"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>2 minutes
 
             
 
@@ -132,6 +132,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <ul>
 <li><a href="#optional">Optional</a></li>
 </ul></li>
+<li><a href="#wercker-build-step">Wercker build step</a></li>
 <li><a href="#deployment">Deployment</a></li>
 </ul>
 </nav>
@@ -160,6 +161,20 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <li>Github Repository for the Wercker buildstep</li>
 <li><a href="https://www.codacy.com/">Codacy</a> account</li>
 </ul>
+
+<h1 id="wercker-build-step">Wercker build step</h1>
+
+<p>Within Wercker there are several build steps already created which you can use for deploying to Github Pages. I however decided to build my own in order to have more control over the script actually running the deployment. You&rsquo;ll need a Github Repository with the following files to build and deploy your own build steps.</p>
+
+<ul>
+<li>run.sh</li>
+<li>step.yml</li>
+<li>wercker.yml</li>
+</ul>
+
+<p>The <code>run.sh</code> will contain the script performing the deployment to Github Pages, <code>step.yml</code> contains the build step specific information like the name and all properties and last the <code>wercker.yml</code> file contains the build and deployment steps for the build step itself. The <code>wercker.yml</code> eventually pushes the step into the &ldquo;Steps Store&rdquo; in Wercker.</p>
+
+<p>In case you&rsquo;re interested, my build step can be found in this <a href="https://github.com/coolbluemelvin/wercker-step-gh-pages">Github Repository</a></p>
 
 <h1 id="deployment">Deployment</h1>
 
@@ -256,10 +271,10 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/ci/cd">ci/cd</a></span><span class="tag"><a href="/tags/hugo">hugo</a></span><span class="tag"><a href="/tags/github">Github</a></span><span class="tag"><a href="/tags/wercker">wercker</a></span><span class="tag"><a href="/tags/codacy">codacy</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>106 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>234 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-02 18:15 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/c2dbe95bde7cc064cd54cb8d44f2a785355d4561" target="_blank" rel="noopener">c2dbe95</a> @ 2019-03-02</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/a0a4cf21ffe400e638ea5072070a7a34e8c62859" target="_blank" rel="noopener">a0a4cf2</a> @ 2019-03-02</p>
         </div>
 
         
