@@ -4,17 +4,17 @@
   
   <url>
     <loc>/posts/2019/03/hugo-wercker-and-github-pages/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2019/03/jamf-meets-splunk/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2019/03/jamf-self-service-and-win10-vms/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
   </url>
   
   <url>
@@ -29,7 +29,7 @@
   
   <url>
     <loc>/posts/2019/02/rename-machine-script/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
   </url>
   
   <url>
@@ -39,19 +39,13 @@
   
   <url>
     <loc>/tags/api/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>/tags/ash/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/bash/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -68,13 +62,13 @@
   
   <url>
     <loc>/tags/ci-cd/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/codacy/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -86,19 +80,19 @@
   
   <url>
     <loc>/tags/github/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/hugo/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -110,37 +104,37 @@
   
   <url>
     <loc>/tags/jamf/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/powershell/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/scripts/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/splunk/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2019-03-02T22:11:12+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -152,7 +146,7 @@
   
   <url>
     <loc>/tags/wercker/</loc>
-    <lastmod>2019-03-02T22:19:16+01:00</lastmod>
+    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
     <priority>0</priority>
   </url>
   
