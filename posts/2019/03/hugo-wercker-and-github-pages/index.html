@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="author" content="Melvin Cornelissen ">
 <meta name="description" content="From Hugo for Github Pages Recently I&amp;rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&amp;rsquo;s not the way to go so instead I&amp;rsquo;ve been building a deployment pipeline using Wercker.
-TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages). Install Hugo in the Hugo repository."/>
+TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="/posts/2019/03/hugo-wercker-and-github-pages/" />
@@ -37,11 +37,11 @@ TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages). Install Hugo in
 
 <meta itemprop="name" content="Hugo, Wercker and Github Pages">
 <meta itemprop="description" content="From Hugo for Github Pages Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using Wercker.
-TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the Hugo repository.">
+TL;DR  Create Github repositories (Hugo &amp; Github Pages).">
 
 
 <meta itemprop="datePublished" content="2019-03-02T19:15:26&#43;01:00" />
-<meta itemprop="dateModified" content="2019-03-03T12:58:49&#43;01:00" />
+<meta itemprop="dateModified" content="2019-03-03T13:07:22&#43;01:00" />
 <meta itemprop="wordCount" content="289">
 
 
@@ -52,7 +52,7 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the
 
 <meta name="twitter:title" content="Hugo, Wercker and Github Pages"/>
 <meta name="twitter:description" content="From Hugo for Github Pages Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using Wercker.
-TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the Hugo repository."/>
+TL;DR  Create Github repositories (Hugo &amp; Github Pages)."/>
 
 
 
@@ -155,15 +155,19 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the
 <h2 id="tl-dr">TL;DR</h2>
 
 <ol>
-<li>Create <a href="https://github.com">Github</a> repositories (Hugo &amp; Github Pages).</li>
-<li>Install <a href="https://gohugo.io">Hugo</a> in the Hugo repository.</li>
-<li>Add <a href="https://gohugo.io">Hugo</a> repository to <a href="https://app.wercker.com">Wercker</a>.
+<li><p>Create <a href="https://github.com">Github</a> repositories (Hugo &amp; Github Pages).</p></li>
+
+<li><p>Install <a href="https://gohugo.io">Hugo</a> in the Hugo repository.</p></li>
+
+<li><p>Add <a href="https://gohugo.io">Hugo</a> repository to <a href="https://app.wercker.com">Wercker</a>.</p>
 
 <ul>
 <li>Add the <a href="https://app.wercker.com/steps/melvincornelissen/gh-pages">gh-pages</a> to the deploy pipeline.</li>
-<li>Add the <a href="https://github.com/settings/tokens">Github personal access token</a> to the deploy pipeline.</li>
+<li>Add the <a href="https://github.com/settings/tokens">Github personal access token</a> to the deploy pipeline.
+<br /></li>
 </ul></li>
-<li>Trigger a build by pushing a commit into the Hugo repository.</li>
+
+<li><p>Trigger a build by pushing a commit into the Hugo repository.</p></li>
 </ol>
 
 <h2 id="prerequisites">Prerequisites</h2>
@@ -294,7 +298,7 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>289 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-02 18:15 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/ab221afcd026c3f5169b7aab43c69987dad729aa" target="_blank" rel="noopener">ab221af</a> @ 2019-03-03</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/76dd5cfd584f50c37a7f739fe4d98789d144dd2d" target="_blank" rel="noopener">76dd5cf</a> @ 2019-03-03</p>
         </div>
 
         
