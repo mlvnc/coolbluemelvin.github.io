@@ -27,18 +27,15 @@ TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)</description>
 <h2 id="tl-dr">TL;DR</h2>
 
 <ol>
-<li><p>Create <a href="https://github.com">Github</a> repositories (Hugo &amp; Github Pages)</p></li>
-
-<li><p>Install <a href="https://gohugo.io">Hugo</a> in the Hugo repository</p></li>
-
-<li><p>Add <a href="https://gohugo.io">Hugo</a> repository to <a href="https://app.wercker.com">Wercker</a></p>
+<li>Create <a href="https://github.com">Github</a> repositories (Hugo &amp; Github Pages)<br /></li>
+<li>Install <a href="https://gohugo.io">Hugo</a> in the Hugo repository<br /></li>
+<li>Add <a href="https://gohugo.io">Hugo</a> repository to <a href="https://app.wercker.com">Wercker</a><br />
 
 <ul>
-<li>Add the <a href="https://app.wercker.com/steps/melvincornelissen/gh-pages">gh-pages</a> to the deploy pipeline</li>
-<li>Add the <a href="https://github.com/settings/tokens">Github personal access token</a> to the deploy pipeline</li>
+<li>Add the <a href="https://app.wercker.com/steps/melvincornelissen/gh-pages">gh-pages</a> to the deploy pipeline<br /></li>
+<li>Add the <a href="https://github.com/settings/tokens">Github personal access token</a> to the deploy pipeline<br /></li>
 </ul></li>
-
-<li><p>Trigger a build by pushing a commit into the Hugo repository</p></li>
+<li>Trigger a build by pushing a commit into the Hugo repository<br /></li>
 </ol>
 
 <h2 id="prerequisites">Prerequisites</h2>
