@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="author" content="Melvin Cornelissen ">
 <meta name="description" content="From Hugo for Github Pages Recently I&amp;rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&amp;rsquo;s not the way to go so instead I&amp;rsquo;ve been building a deployment pipeline using Wercker.
-Prerequisites  Github Repository for the Hugo files Github Repository for the Github page (username."/>
+TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages). Install Hugo in the Hugo repository."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
 <link rel="canonical" href="/posts/2019/03/hugo-wercker-and-github-pages/" />
@@ -37,12 +37,12 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 <meta itemprop="name" content="Hugo, Wercker and Github Pages">
 <meta itemprop="description" content="From Hugo for Github Pages Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using Wercker.
-Prerequisites  Github Repository for the Hugo files Github Repository for the Github page (username.">
+TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the Hugo repository.">
 
 
 <meta itemprop="datePublished" content="2019-03-02T19:15:26&#43;01:00" />
-<meta itemprop="dateModified" content="2019-03-02T22:55:19&#43;01:00" />
-<meta itemprop="wordCount" content="242">
+<meta itemprop="dateModified" content="2019-03-03T12:53:09&#43;01:00" />
+<meta itemprop="wordCount" content="289">
 
 
 
@@ -52,7 +52,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 
 <meta name="twitter:title" content="Hugo, Wercker and Github Pages"/>
 <meta name="twitter:description" content="From Hugo for Github Pages Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using Wercker.
-Prerequisites  Github Repository for the Hugo files Github Repository for the Github page (username."/>
+TL;DR  Create Github repositories (Hugo &amp; Github Pages). Install Hugo in the Hugo repository."/>
 
 
 
@@ -130,6 +130,7 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <ul>
 <li><a href="#from-hugo-for-github-pages">From Hugo for Github Pages</a>
 <ul>
+<li><a href="#tl-dr">TL;DR</a></li>
 <li><a href="#prerequisites">Prerequisites</a>
 <ul>
 <li><a href="#optional">Optional</a></li>
@@ -150,6 +151,20 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
 <h1 id="from-hugo-for-github-pages">From Hugo for Github Pages</h1>
 
 <p>Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using <a href="https://app.wercker.com/melvincornelissen/mlvn.io/installing/">Wercker</a>.</p>
+
+<h2 id="tl-dr">TL;DR</h2>
+
+<ol>
+<li>Create <a href="https://github.com">Github</a> repositories (Hugo &amp; Github Pages).</li>
+<li>Install <a href="https://gohugo.io">Hugo</a> in the Hugo repository.</li>
+<li>Add <a href="https://gohugo.io">Hugo</a> repository to <a href="https://app.wercker.com">Wercker</a>.
+
+<ul>
+<li>Add the <a href="https://app.wercker.com/steps/melvincornelissen/gh-pages">gh-pages</a> to the deploy pipeline.</li>
+<li>Add the <a href="https://github.com/settings/tokens">Github personal access token</a> to the deploy pipeline.</li>
+</ul></li>
+<li>Trigger a build by pushing a commit into the Hugo repository.</li>
+</ol>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
@@ -276,10 +291,10 @@ Prerequisites  Github Repository for the Hugo files Github Repository for the Gi
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="/tags/ci/cd">CI/CD</a></span><span class="tag"><a href="/tags/hugo">Hugo</a></span><span class="tag"><a href="/tags/github">Github</a></span><span class="tag"><a href="/tags/wercker">Wercker</a></span><span class="tag"><a href="/tags/codacy">Codacy</a></span>
                 </p>
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>242 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>289 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-02 18:15 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/81e270abe7235bfe4e59682e387195df4fde68b7" target="_blank" rel="noopener">81e270a</a> @ 2019-03-02</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/02614648910209a4437ef18a53bf787b6d6d26ea" target="_blank" rel="noopener">0261464</a> @ 2019-03-03</p>
         </div>
 
         
