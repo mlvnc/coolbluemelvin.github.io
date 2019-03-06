@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Untagged on Hi! I&#39;m Melvin</title>
+    <link>/tags/untagged/</link>
+    <description>Recent content in Untagged on Hi! I&#39;m Melvin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
+    <lastBuildDate>Wed, 06 Mar 2019 21:05:47 +0100</lastBuildDate>
+    
+	<atom:link href="/tags/untagged/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Jamf and Git2jss</title>
+      <link>/posts/2019/03/jamf-and-git2jss/</link>
+      <pubDate>Wed, 06 Mar 2019 21:05:47 +0100</pubDate>
+      
+      <guid>/posts/2019/03/jamf-and-git2jss/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
