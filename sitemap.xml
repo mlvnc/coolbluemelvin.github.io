@@ -3,8 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/2019/03/jamf-and-git2jss/</loc>
-    <lastmod>2019-03-06T21:05:52+01:00</lastmod>
+    <loc>/posts/2019/03/jamf-git2jss-and-teamcity/</loc>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
   </url>
   
   <url>
@@ -51,13 +51,19 @@
   
   <url>
     <loc>/tags/ci-cd/</loc>
-    <lastmod>2019-03-03T18:48:43+01:00</lastmod>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/codacy/</loc>
     <lastmod>2019-03-03T18:48:43+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/git2jss/</loc>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -69,7 +75,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-03-06T21:05:52+01:00</lastmod>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -81,13 +87,13 @@
   
   <url>
     <loc>/tags/jamf/</loc>
-    <lastmod>2019-03-02T22:23:38+01:00</lastmod>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2019-03-06T21:05:52+01:00</lastmod>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,8 +122,8 @@
   </url>
   
   <url>
-    <loc>/tags/untagged/</loc>
-    <lastmod>2019-03-06T21:05:52+01:00</lastmod>
+    <loc>/tags/teamcity/</loc>
+    <lastmod>2019-03-06T21:11:57+01:00</lastmod>
     <priority>0</priority>
   </url>
   

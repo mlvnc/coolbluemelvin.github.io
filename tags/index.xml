@@ -33,7 +33,7 @@
     <item>
       <title>Ci/Cd</title>
       <link>/tags/ci-cd/</link>
-      <pubDate>Sat, 02 Mar 2019 19:15:26 +0100</pubDate>
+      <pubDate>Wed, 06 Mar 2019 21:05:47 +0100</pubDate>
       
       <guid>/tags/ci-cd/</guid>
       <description></description>
@@ -45,6 +45,15 @@
       <pubDate>Sat, 02 Mar 2019 19:15:26 +0100</pubDate>
       
       <guid>/tags/codacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git2jss</title>
+      <link>/tags/git2jss/</link>
+      <pubDate>Wed, 06 Mar 2019 21:05:47 +0100</pubDate>
+      
+      <guid>/tags/git2jss/</guid>
       <description></description>
     </item>
     
@@ -69,7 +78,7 @@
     <item>
       <title>Jamf</title>
       <link>/tags/jamf/</link>
-      <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
+      <pubDate>Wed, 06 Mar 2019 21:05:47 +0100</pubDate>
       
       <guid>/tags/jamf/</guid>
       <description></description>
@@ -90,15 +99,6 @@
       <pubDate>Fri, 01 Mar 2019 13:57:04 +0100</pubDate>
       
       <guid>/tags/scripts/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Splunk</title>
-      <link>/tags/splunk/</link>
-      <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
-      
-      <guid>/tags/splunk/</guid>
       <description></description>
     </item>
     
