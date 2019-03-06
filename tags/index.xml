@@ -31,15 +31,6 @@
     </item>
     
     <item>
-      <title>Cats</title>
-      <link>/tags/cats/</link>
-      <pubDate>Thu, 28 Feb 2019 21:09:16 +0100</pubDate>
-      
-      <guid>/tags/cats/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ci/Cd</title>
       <link>/tags/ci-cd/</link>
       <pubDate>Sat, 02 Mar 2019 19:15:26 +0100</pubDate>
@@ -76,15 +67,6 @@
     </item>
     
     <item>
-      <title>Ipsum</title>
-      <link>/tags/ipsum/</link>
-      <pubDate>Thu, 28 Feb 2019 21:09:16 +0100</pubDate>
-      
-      <guid>/tags/ipsum/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Jamf</title>
       <link>/tags/jamf/</link>
       <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
@@ -99,6 +81,24 @@
       <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
       
       <guid>/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scripts</title>
+      <link>/tags/scripts/</link>
+      <pubDate>Fri, 01 Mar 2019 13:57:04 +0100</pubDate>
+      
+      <guid>/tags/scripts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Splunk</title>
+      <link>/tags/splunk/</link>
+      <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
+      
+      <guid>/tags/splunk/</guid>
       <description></description>
     </item>
     
