@@ -220,7 +220,7 @@ The script that&amp;rsquo;s performing the API call is the following.</descripti
 index=production_jamf
 sourcetype=jamf
 disabled = false</code></pre></div>
-<p>Eventually we&rsquo;re pushing the data into an index in our Splunkcloud environment. Due to the fact we&rsquo;re pushing JSON through our SplunkForwarder we needed to create a new sourcetype and adjust adjust it for the JSON we&rsquo;re pushing to Splunk. The actual changes made are the following:</p>
+<p>Eventually we&rsquo;re pushing the data into an index in our Splunkcloud environment. Due to the fact we&rsquo;re pushing JSON through our SplunkForwarder we needed to create a new sourcetype and adjust it for the JSON we&rsquo;re pushing to Splunk. The actual changes made are the following:</p>
 <div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">Indexed Extractions   none
 SEDCMD-strip_prefix   s/^[^{]+//g
 KV_MODE               json</code></pre></div>
