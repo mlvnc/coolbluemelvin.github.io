@@ -19,7 +19,7 @@
             <description>  </description>
             <content type="html"><![CDATA[
     <figure class="center" >
-        <img src="/images/postfix-multi"  alt="wercker"   style="border-radius: 6px;"  />
+        <img src="/images/postfix-multi.png"  alt="postfix-multi"   style="border-radius: 6px;"  />
 
         
     </figure>
