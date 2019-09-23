@@ -31,17 +31,14 @@ Therefore we&amp;rsquo;ve chosen to run multiple instances to make decisions bas
 <h2 id="how">How?</h2>
 
 <p>First we need to enable postfix multi instance. We&rsquo;re calling the second instance postfix-delivery as that&rsquo;s what the main goal of the instance would be. We keep the initial postfix instance to decide which content filter the mail gets routed to.</p>
-
-<pre><code>####Initiate MultiInstance
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">####Initiate MultiInstance</span>
 postmulti -e init
 
-####Create Secondary Instance postfix-delivery
+<span class="c1">####Create Secondary Instance postfix-delivery</span>
 postmulti -I postfix-deliver -e create
 
-####Enable Secondary Instance
-postmulti -i postfix-delivery -e enable
-</code></pre>
-
+<span class="c1">####Enable Secondary Instance</span>
+postmulti -i postfix-delivery -e enable</code></pre></div>
 
     <figure class="center" >
         <img src="/images/postfix-multi.png"  alt="postfix-multi"   style="border-radius: 6px;"  />
