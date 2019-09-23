@@ -48,6 +48,19 @@ secondmailaddress@otherdomain.com   smtp:secondaryfilter.domain.com:25
 *                                   smtp:primaryfilter.domain.com:10024
 </code></pre>
 
+<p>This will route the mails to the specified filters whereas our primary filter is a Amavis cluster and the secondary filter a third party solution. As we are &ldquo;Proof Of Concept&rdquo;ing this we wanted to have control over the addresses that go through the third party solution. Both filters will return their mail to the second postfix instance on port 10025. This instance has the following transport map and recipient canonical map:</p>
+
+<p>Transport map:</p>
+
+<pre><code>*                                   smtp:[aspmx.l.google.com]
+</code></pre>
+
+<p>Recipient canonical map:</p>
+
+<pre><code>firstmailaddress@domain.com         alias123@application.com
+secondmailaddress@otherdomain.com   alias321@application.com
+</code></pre>
+
 
     <figure class="center" >
         <img src="/images/postfix-multi.png"  alt="postfix-multi"   style="border-radius: 6px;"  />
