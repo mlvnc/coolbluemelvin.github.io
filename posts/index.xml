@@ -30,7 +30,9 @@ Therefore we&amp;rsquo;ve chosen to run multiple instances to make decisions bas
 
 <h2 id="how">How?</h2>
 
-<h3 id="first-we-need-to-enable-postfix-multi-instance">First we need to enable postfix multi instance.</h3>
+<h3 id="first">First&hellip;</h3>
+
+<p>&hellip;we need to enable postfix multi instance.</p>
 
 <p>We&rsquo;re calling the second instance postfix-delivery as that&rsquo;s what the main goal of the instance will be. We keep the initial postfix instance to decide which content filter the mail gets routed to.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">####Initiate MultiInstance</span>
@@ -41,7 +43,9 @@ postmulti -I postfix-delivery -e create
 
 <span class="c1">####Enable Secondary Instance</span>
 postmulti -i postfix-delivery -e enable</code></pre></div>
-<h3 id="next-we-need-to-configure-the-new-instance-s-main-and-master-configs">Next we need to configure the new instance&rsquo;s main and master configs.</h3>
+<h3 id="next">Next&hellip;</h3>
+
+<p>&hellip;we need to configure the new instance&rsquo;s main and master configs.</p>
 
 <p>The main instance will run on port :25 and transports to the filters default ports. The filters will return the mail to the second instance on port :100025. This way we can transport mail based on two transport maps and have granularly control over which mail goes through which filter.</p>
 
@@ -52,7 +56,7 @@ secondmailaddress@otherdomain.com   smtp:secondaryfilter.domain.com:25
 *                                   smtp:primaryfilter.domain.com:10024
 </code></pre>
 
-<p>This will route the mails to the specified filters whereas our primary filter is a Amavis cluster and the secondary filter a third party solution. As we are &ldquo;Proof Of Concept&rdquo;ing this we wanted to have control over the addresses that go through the third party solution. Both filters will return their mail to the second postfix instance listening on port :10025. This instance has the following transport map and recipient canonical map:</p>
+<p>This will route the mails to the specified filters whereas our primary filter is a Amavis cluster and the secondary filter a third party solution. As we are &ldquo;Proof Of Concept&rdquo;ing this we wanted to have control over the addresses that go through the third party solution. Both filters will return their mail to the second postfix instance listening on port :10025. This instance has the following transport and recipient canonical map:</p>
 
 <p>Transport map:</p>
 
