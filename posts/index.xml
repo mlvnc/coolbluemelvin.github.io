@@ -50,25 +50,16 @@ postmulti -i postfix-delivery -e enable</code></pre></div>
 <p>The main instance will run on port :25 and transports to the filters default ports. The filters will return the mail to the second instance on port :100025. This way we can transport mail based on two transport maps and have granularly control over which mail goes through which filter.</p>
 
 <p>The transport map of the (initial) postfix instance running on port :25 would look like following:</p>
-
-<pre><code>firstmailaddress@domain.com         smtp:secondaryfilter.domain.com:25
+<div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">firstmailaddress@domain.com         smtp:secondaryfilter.domain.com:25
 secondmailaddress@otherdomain.com   smtp:secondaryfilter.domain.com:25
-*                                   smtp:primaryfilter.domain.com:10024
-</code></pre>
-
+*                                   smtp:primaryfilter.domain.com:10024</code></pre></div>
 <p>This will route the mails to the specified filters whereas our primary filter is a Amavis cluster and the secondary filter a third party solution. As we are &ldquo;Proof Of Concept&rdquo;ing this we wanted to have control over the addresses that go through the third party solution. Both filters will return their mail to the second postfix instance listening on port :10025. This instance has the following transport and recipient canonical map:</p>
 
 <p>Transport map:</p>
-
-<pre><code>*                                   smtp:[aspmx.l.google.com]
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">*                                   smtp:[aspmx.l.google.com]</code></pre></div>
 <p>Recipient canonical map:</p>
-
-<pre><code>firstmailaddress@domain.com         alias123@application.com
-secondmailaddress@otherdomain.com   alias321@application.com
-</code></pre>
-
+<div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">firstmailaddress@domain.com         alias123@application.com
+secondmailaddress@otherdomain.com   alias321@application.com</code></pre></div>
 
     <figure class="center" >
         <img src="/images/postfix-multi.png"  alt="postfix-multi"   style="border-radius: 6px;"  />
