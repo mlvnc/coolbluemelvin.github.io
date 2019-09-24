@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="author" content="Melvin Cornelissen ">
-<meta name="description" content="Decisions decisions Dave has to make Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&amp;rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
+<meta name="description" content="Decisions decisions Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&amp;rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
 Therefore we&amp;rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
@@ -36,13 +36,13 @@ Therefore we&amp;rsquo;ve chosen to run multiple instances to make decisions bas
 <link rel="shortcut icon" href="/favicon.ico">
 
 <meta itemprop="name" content="Postfix Multi Instance">
-<meta itemprop="description" content="Decisions decisions Dave has to make Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
+<meta itemprop="description" content="Decisions decisions Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
 Therefore we&rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map.">
 
 
 <meta itemprop="datePublished" content="2019-09-19T15:19:46&#43;02:00" />
-<meta itemprop="dateModified" content="2019-09-24T13:01:49&#43;02:00" />
-<meta itemprop="wordCount" content="344">
+<meta itemprop="dateModified" content="2019-09-24T13:04:00&#43;02:00" />
+<meta itemprop="wordCount" content="340">
 
 
 
@@ -51,7 +51,7 @@ Therefore we&rsquo;ve chosen to run multiple instances to make decisions based o
 <meta name="twitter:image" content="/"/>
 
 <meta name="twitter:title" content="Postfix Multi Instance"/>
-<meta name="twitter:description" content="Decisions decisions Dave has to make Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
+<meta name="twitter:description" content="Decisions decisions Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
 Therefore we&rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map."/>
 
 
@@ -129,7 +129,7 @@ Therefore we&rsquo;ve chosen to run multiple instances to make decisions based o
             <div class="post-content">
                 
 
-<h1 id="decisions-decisions-dave-has-to-make">Decisions decisions Dave has to make</h1>
+<h1 id="decisions-decisions">Decisions decisions</h1>
 
 <h2 id="why-are-we-doing-this">Why are we doing this</h2>
 
@@ -186,10 +186,10 @@ secondmailaddress@otherdomain.com   alias321@application.com</code></pre></div>
 
         <div class="post-info">
 
-            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>344 Words</p>
+            <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>340 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-09-19 13:19 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/975f81fb34b47b393b757edb5ca5078a59ea8d6a" target="_blank" rel="noopener">975f81f</a> @ 2019-09-24</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/6daeb13f462bba14527b7beb13ee9ce6315811f8" target="_blank" rel="noopener">6daeb13</a> @ 2019-09-24</p>
         </div>
 
         
