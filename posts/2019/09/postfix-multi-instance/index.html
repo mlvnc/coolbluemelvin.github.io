@@ -5,7 +5,9 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="author" content="Melvin Cornelissen ">
-<meta name="description" content="Decisions decisions Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&amp;rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
+<meta name="description" content="#Decisions decisions
+##Why are we doing this
+I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&amp;rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
 Therefore we&amp;rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
@@ -36,12 +38,14 @@ Therefore we&amp;rsquo;ve chosen to run multiple instances to make decisions bas
 <link rel="shortcut icon" href="/favicon.ico">
 
 <meta itemprop="name" content="Postfix Multi Instance">
-<meta itemprop="description" content="Decisions decisions Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
+<meta itemprop="description" content="#Decisions decisions
+##Why are we doing this
+I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
 Therefore we&rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map.">
 
 
 <meta itemprop="datePublished" content="2019-09-19T15:19:46&#43;02:00" />
-<meta itemprop="dateModified" content="2019-09-24T10:40:25&#43;02:00" />
+<meta itemprop="dateModified" content="2019-09-24T10:41:33&#43;02:00" />
 <meta itemprop="wordCount" content="340">
 
 
@@ -51,7 +55,9 @@ Therefore we&rsquo;ve chosen to run multiple instances to make decisions based o
 <meta name="twitter:image" content="/"/>
 
 <meta name="twitter:title" content="Postfix Multi Instance"/>
-<meta name="twitter:description" content="Decisions decisions Why are we doing this I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
+<meta name="twitter:description" content="#Decisions decisions
+##Why are we doing this
+I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.
 Therefore we&rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map."/>
 
 
@@ -127,21 +133,18 @@ Therefore we&rsquo;ve chosen to run multiple instances to make decisions based o
             
 
             <div class="post-content">
-                
+                <p>#Decisions decisions</p>
 
-<h1 id="decisions-decisions">Decisions decisions</h1>
-
-<h2 id="why-are-we-doing-this">Why are we doing this</h2>
+<p>##Why are we doing this</p>
 
 <p>I was challenged with finding a solution to split up our incoming mailflow and push it through separate content filters. As we&rsquo;re trying to split mails within the same domain we were unable to make this decision within a single postfix instance as it would only read a single transport map.</p>
 
 <p>Therefore we&rsquo;ve chosen to run multiple instances to make decisions based on a 1st and 2nd transport map. The reason we need two transport maps is because besides the content filter split we also use different applications as endpoints for certain mail addresses.</p>
 
-<h2 id="how-are-we-going-to-do-this">How are we going to do this</h2>
+<p>##How are we going to do this</p>
 
-<h3 id="first">First</h3>
-
-<p>&hellip;we need to enable postfix multi instance.</p>
+<p>###First
+&hellip;we need to enable postfix multi instance.</p>
 
 <p>We&rsquo;re calling the second instance postfix-delivery as that&rsquo;s what the main goal of the instance will be. We keep the initial postfix instance to decide which content filter the mail gets routed to.</p>
 <div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">####Initiate MultiInstance</span>
@@ -152,9 +155,8 @@ postmulti -I postfix-delivery -e create
 
 <span class="c1">####Enable Secondary Instance</span>
 postmulti -i postfix-delivery -e enable</code></pre></div>
-<h3 id="next">Next</h3>
-
-<p>&hellip;we need to configure the new instance&rsquo;s main and master configs.</p>
+<p>###Next
+&hellip;we need to configure the new instance&rsquo;s main and master configs.</p>
 
 <p>The main instance will run on port :25 and transports to the filters default ports. The filters will return the mail to the second instance on port :100025. This way we can transport mail based on two transport maps and have granularly control over which mail goes through which filter.</p>
 
@@ -166,7 +168,7 @@ secondmailaddress@otherdomain.com   smtp:secondaryfilter.domain.com:25
 
 <p>Transport map:</p>
 <div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">*                                   smtp:[aspmx.l.google.com]
-thirdmailaddress@domain.com                smtp:[1.2.3.4]</code></pre></div>
+thirdmailaddress@domain.com         smtp:[1.2.3.4]</code></pre></div>
 <p>Recipient canonical map:</p>
 <div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">firstmailaddress@domain.com         alias123@application.com
 secondmailaddress@otherdomain.com   alias321@application.com</code></pre></div>
@@ -189,7 +191,7 @@ secondmailaddress@otherdomain.com   alias321@application.com</code></pre></div>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>340 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-09-19 13:19 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/d490f32467803998d5277df16807d58ef3822188" target="_blank" rel="noopener">d490f32</a> @ 2019-09-24</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/858f5fd356319a7d4107c5ee6b5a2f0732c831ec" target="_blank" rel="noopener">858f5fd</a> @ 2019-09-24</p>
         </div>
 
         
