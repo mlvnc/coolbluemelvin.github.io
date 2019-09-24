@@ -236,13 +236,13 @@ TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)</description>
             <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
             
             <guid>/posts/2019/03/jamf-meets-splunk/</guid>
-            <description>Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by a SplunkForwarder.
+            <description>Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by the SplunkForwarder.
 The script that&amp;rsquo;s performing the API call is the following.</description>
             <content type="html"><![CDATA[
 
 <h3 id="jamf-metrics-to-splunkenterprise">Jamf metrics to SplunkEnterprise</h3>
 
-<p>Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.</p>
+<p>Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by the SplunkForwarder.</p>
 
 <p>The script that&rsquo;s performing the API call is the following.</p>
 <div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c">#gather all enrolled computers</span>

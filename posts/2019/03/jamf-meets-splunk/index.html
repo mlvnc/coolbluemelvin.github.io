@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 <meta name="author" content="Melvin Cornelissen ">
-<meta name="description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by a SplunkForwarder.
+<meta name="description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&amp;rsquo;s being monitored by the SplunkForwarder.
 The script that&amp;rsquo;s performing the API call is the following."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
@@ -36,12 +36,12 @@ The script that&amp;rsquo;s performing the API call is the following."/>
 <link rel="shortcut icon" href="/favicon.ico">
 
 <meta itemprop="name" content="Jamf meets Splunk">
-<meta itemprop="description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.
+<meta itemprop="description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by the SplunkForwarder.
 The script that&rsquo;s performing the API call is the following.">
 
 
 <meta itemprop="datePublished" content="2019-03-01T14:32:10&#43;01:00" />
-<meta itemprop="dateModified" content="2019-07-14T15:16:59&#43;02:00" />
+<meta itemprop="dateModified" content="2019-09-24T13:15:38&#43;02:00" />
 <meta itemprop="wordCount" content="365">
 
 
@@ -51,7 +51,7 @@ The script that&rsquo;s performing the API call is the following.">
 <meta name="twitter:image" content="/"/>
 
 <meta name="twitter:title" content="Jamf meets Splunk"/>
-<meta name="twitter:description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.
+<meta name="twitter:description" content="Jamf metrics to SplunkEnterprise Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by the SplunkForwarder.
 The script that&rsquo;s performing the API call is the following."/>
 
 
@@ -131,7 +131,7 @@ The script that&rsquo;s performing the API call is the following."/>
 
 <h3 id="jamf-metrics-to-splunkenterprise">Jamf metrics to SplunkEnterprise</h3>
 
-<p>Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by a SplunkForwarder.</p>
+<p>Since we like to have insights in our enrollments we were looking for a solution that could update data as close to realtime as possible. We ended up using Splunk and a intermediate script server. The script server is performing the API call and providing data to the file that&rsquo;s being monitored by the SplunkForwarder.</p>
 
 <p>The script that&rsquo;s performing the API call is the following.</p>
 <div class="highlight"><pre class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c">#gather all enrolled computers</span>
@@ -199,7 +199,7 @@ KV_MODE               json</code></pre></div>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>365 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-01 13:32 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/8a742d32ca3c19af0d7181950f59cd2b1f25b534" target="_blank" rel="noopener">8a742d3</a> @ 2019-07-14</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/d615c33306bac4d9dac21d8af707e55e22dfc764" target="_blank" rel="noopener">d615c33</a> @ 2019-09-24</p>
         </div>
 
         
