@@ -8,12 +8,12 @@
 <meta name="description" content="#!/bin/bash  ############################ ##### Script Variables ##### ############################ # $currentuser = Get the current logged in user # $default_app = Application used as default # $types = Uniform Type Identifer of the file type that needs to be adjusted currentuser=$(/usr/bin/python -c &amp;#39;from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,&amp;#34;&amp;#34;][username in [u&amp;#34;loginwindow&amp;#34;, None, u&amp;#34;&amp;#34;]]; sys.stdout.write(username &#43; &amp;#34;\n&amp;#34;);&amp;#39;) default_app=&amp;#39;&amp;#34;com.google.chrome&amp;#34;&amp;#39; declare -a types=(&amp;#39;&amp;#34;com.microsoft.word.doc&amp;#34;&amp;#39; &amp;#39;&amp;#34;org.openxmlformats.wordprocessingml.document&amp;#34;&amp;#39; &amp;#39;&amp;#34;com.microsoft.powerpoint.ppt&amp;#34;&amp;#39; &amp;#39;&amp;#34;org."/>
 <meta name="keywords" content=""/>
 <meta name="robots" content="noodp"/>
-<link rel="canonical" href="/posts/2019/09/macos-default-app-change/" />
+<link rel="canonical" href="/posts/2019/09/macos-change-default-application-for-uti/" />
 
 
     <title>
         
-            Macos Default App Change :: Hi! I&#39;m Melvin 
+            macOS Change default application for UTI :: Hi! I&#39;m Melvin 
         
     </title>
 
@@ -34,12 +34,12 @@
 <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
 <link rel="shortcut icon" href="/favicon.ico">
 
-<meta itemprop="name" content="Macos Default App Change">
+<meta itemprop="name" content="macOS Change default application for UTI">
 <meta itemprop="description" content="#!/bin/bash  ############################ ##### Script Variables ##### ############################ # $currentuser = Get the current logged in user # $default_app = Application used as default # $types = Uniform Type Identifer of the file type that needs to be adjusted currentuser=$(/usr/bin/python -c &#39;from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,&#34;&#34;][username in [u&#34;loginwindow&#34;, None, u&#34;&#34;]]; sys.stdout.write(username &#43; &#34;\n&#34;);&#39;) default_app=&#39;&#34;com.google.chrome&#34;&#39; declare -a types=(&#39;&#34;com.microsoft.word.doc&#34;&#39; &#39;&#34;org.openxmlformats.wordprocessingml.document&#34;&#39; &#39;&#34;com.microsoft.powerpoint.ppt&#34;&#39; &#39;&#34;org.">
 
 
 <meta itemprop="datePublished" content="2019-09-25T10:59:08&#43;02:00" />
-<meta itemprop="dateModified" content="2019-09-25T11:05:28&#43;02:00" />
+<meta itemprop="dateModified" content="2019-09-25T17:14:16&#43;02:00" />
 <meta itemprop="wordCount" content="97">
 
 
@@ -48,7 +48,7 @@
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="/"/>
 
-<meta name="twitter:title" content="Macos Default App Change"/>
+<meta name="twitter:title" content="macOS Change default application for UTI"/>
 <meta name="twitter:description" content="#!/bin/bash  ############################ ##### Script Variables ##### ############################ # $currentuser = Get the current logged in user # $default_app = Application used as default # $types = Uniform Type Identifer of the file type that needs to be adjusted currentuser=$(/usr/bin/python -c &#39;from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,&#34;&#34;][username in [u&#34;loginwindow&#34;, None, u&#34;&#34;]]; sys.stdout.write(username &#43; &#34;\n&#34;);&#39;) default_app=&#39;&#34;com.google.chrome&#34;&#39; declare -a types=(&#39;&#34;com.microsoft.word.doc&#34;&#39; &#39;&#34;org.openxmlformats.wordprocessingml.document&#34;&#39; &#39;&#34;com.microsoft.powerpoint.ppt&#34;&#39; &#39;&#34;org."/>
 
 
@@ -119,7 +119,7 @@
         </div>
 
         <article>
-            <h2 class="post-title"><a href="/posts/2019/09/macos-default-app-change/">Macos Default App Change</a></h2>
+            <h2 class="post-title"><a href="/posts/2019/09/macos-change-default-application-for-uti/">macOS Change default application for UTI</a></h2>
 
             
 
@@ -156,7 +156,7 @@
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>97 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-09-25 08:59 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/2b108f68f39702dcfd98cfc6300677c331c9a147" target="_blank" rel="noopener">2b108f6</a> @ 2019-09-25</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/de1f531ec39ae295db0002d32f925ce3c1103590" target="_blank" rel="noopener">de1f531</a> @ 2019-09-25</p>
         </div>
 
         

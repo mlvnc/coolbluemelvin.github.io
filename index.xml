@@ -13,11 +13,11 @@
     
     
     <item>
-      <title>Macos Default App Change</title>
-      <link>/posts/2019/09/macos-default-app-change/</link>
+      <title>macOS Change default application for UTI</title>
+      <link>/posts/2019/09/macos-change-default-application-for-uti/</link>
       <pubDate>Wed, 25 Sep 2019 10:59:08 +0200</pubDate>
       
-      <guid>/posts/2019/09/macos-default-app-change/</guid>
+      <guid>/posts/2019/09/macos-change-default-application-for-uti/</guid>
       <description>#!/bin/bash  ############################ ##### Script Variables ##### ############################ # $currentuser = Get the current logged in user # $default_app = Application used as default # $types = Uniform Type Identifer of the file type that needs to be adjusted currentuser=$(/usr/bin/python -c &amp;#39;from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,&amp;#34;&amp;#34;][username in [u&amp;#34;loginwindow&amp;#34;, None, u&amp;#34;&amp;#34;]]; sys.stdout.write(username + &amp;#34;\n&amp;#34;);&amp;#39;) default_app=&amp;#39;&amp;#34;com.google.chrome&amp;#34;&amp;#39; declare -a types=(&amp;#39;&amp;#34;com.microsoft.word.doc&amp;#34;&amp;#39; &amp;#39;&amp;#34;org.openxmlformats.wordprocessingml.document&amp;#34;&amp;#39; &amp;#39;&amp;#34;com.microsoft.powerpoint.ppt&amp;#34;&amp;#39; &amp;#39;&amp;#34;org.</description>
     </item>
     
