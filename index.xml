@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;</copyright>
-    <lastBuildDate>Thu, 19 Sep 2019 15:19:46 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 25 Sep 2019 10:59:08 +0200</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Macos Default App Change</title>
+      <link>/posts/2019/09/macos-default-app-change/</link>
+      <pubDate>Wed, 25 Sep 2019 10:59:08 +0200</pubDate>
+      
+      <guid>/posts/2019/09/macos-default-app-change/</guid>
+      <description>#!/bin/bash  ############################ ##### Script Variables ##### ############################ # $currentuser = Get the current logged in user # $default_app = Application used as default # $types = Uniform Type Identifer of the file type that needs to be adjusted currentuser=$(/usr/bin/python -c &amp;#39;from SystemConfiguration import SCDynamicStoreCopyConsoleUser; import sys; username = (SCDynamicStoreCopyConsoleUser(None, None, None) or [None])[0]; username = [username,&amp;#34;&amp;#34;][username in [u&amp;#34;loginwindow&amp;#34;, None, u&amp;#34;&amp;#34;]]; sys.stdout.write(username + &amp;#34;\n&amp;#34;);&amp;#39;) default_app=&amp;#39;&amp;#34;com.google.chrome&amp;#34;&amp;#39; declare -a types=(&amp;#39;&amp;#34;com.microsoft.word.doc&amp;#34;&amp;#39; &amp;#39;&amp;#34;org.openxmlformats.wordprocessingml.document&amp;#34;&amp;#39; &amp;#39;&amp;#34;com.microsoft.powerpoint.ppt&amp;#34;&amp;#39; &amp;#39;&amp;#34;org.</description>
+    </item>
     
     <item>
       <title>Postfix Multi Instance</title>
