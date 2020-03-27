@@ -22,6 +22,24 @@
     </item>
     
     <item>
+      <title>Application</title>
+      <link>/tags/application/</link>
+      <pubDate>Fri, 27 Mar 2020 08:27:09 +0100</pubDate>
+      
+      <guid>/tags/application/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Autopkg</title>
+      <link>/tags/autopkg/</link>
+      <pubDate>Fri, 27 Mar 2020 08:27:09 +0100</pubDate>
+      
+      <guid>/tags/autopkg/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bash</title>
       <link>/tags/bash/</link>
       <pubDate>Fri, 01 Mar 2019 13:57:04 +0100</pubDate>
@@ -78,27 +96,9 @@
     <item>
       <title>Jamf</title>
       <link>/tags/jamf/</link>
-      <pubDate>Wed, 06 Mar 2019 21:05:47 +0100</pubDate>
+      <pubDate>Fri, 27 Mar 2020 08:27:09 +0100</pubDate>
       
       <guid>/tags/jamf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Powershell</title>
-      <link>/tags/powershell/</link>
-      <pubDate>Fri, 01 Mar 2019 14:32:10 +0100</pubDate>
-      
-      <guid>/tags/powershell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Scripts</title>
-      <link>/tags/scripts/</link>
-      <pubDate>Fri, 01 Mar 2019 13:57:04 +0100</pubDate>
-      
-      <guid>/tags/scripts/</guid>
       <description></description>
     </item>
     
