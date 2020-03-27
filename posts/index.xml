@@ -16,12 +16,10 @@
             <pubDate>Fri, 27 Mar 2020 08:27:09 +0100</pubDate>
             
             <guid>/posts/2020/03/autopkg/</guid>
-            <description>AutoPKG applications for Jamf Test!</description>
+            <description> AutoPKG applications for Jamf </description>
             <content type="html"><![CDATA[
 
 <h3 id="autopkg-applications-for-jamf">AutoPKG applications for Jamf</h3>
-
-<p>Test!</p>
 ]]></content>
         </item>
         
@@ -107,13 +105,10 @@ thirdmailaddress@domain.com         smtp:[1.2.3.4]</code></pre></div>
 <p>Recipient canonical map:</p>
 <div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">firstmailaddress@domain.com         alias123@application.com
 secondmailaddress@otherdomain.com   alias321@application.com</code></pre></div>
-
-    <figure class="center" >
-        <img src="/images/postfix-multi.png"  alt="postfix-multi"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
+<figure>
+    <img src="/images/postfix-multi.png"
+         alt="postfix-multi"/> 
+</figure>
 
 ]]></content>
         </item>
@@ -220,58 +215,40 @@ TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)</description>
 </span><span class="w">        </span>domain<span class="p">:</span><span class="w"> </span>mlvn.io<span class="w">
 </span><span class="w">        </span>repo<span class="p">:</span><span class="w"> </span>coolbluemelvin/coolbluemelvin.github.io<span class="w">
 </span><span class="w">        </span>path<span class="p">:</span><span class="w"> </span>public</code></pre></div>
-
-    <figure class="center" >
-        <img src="/images/wercker.png"  alt="wercker"   style="border-radius: 6px;"  />
-
-        
-    </figure>
+<figure>
+    <img src="/images/wercker.png"
+         alt="wercker"/> 
+</figure>
 
 
+<figure>
+    <img src="/images/wercker-build.png"
+         alt="wercker-build"/> 
+</figure>
 
 
-    <figure class="center" >
-        <img src="/images/wercker-build.png"  alt="wercker-build"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
+<figure>
+    <img src="/images/wercker-deploy.png"
+         alt="wercker-deploy"/> 
+</figure>
 
 
-
-    <figure class="center" >
-        <img src="/images/wercker-deploy.png"  alt="wercker-deploy"   style="border-radius: 6px;"  />
-
-        
-    </figure>
+<figure>
+    <img src="/images/codacy.png"
+         alt="codacy"/> 
+</figure>
 
 
+<figure>
+    <img src="/images/codacy-checks.png"
+         alt="codacy-checks"/> 
+</figure>
 
 
-    <figure class="center" >
-        <img src="/images/codacy.png"  alt="codacy"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
-
-
-
-    <figure class="center" >
-        <img src="/images/codacy-checks.png"  alt="codacy-checks"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
-
-
-
-    <figure class="center" >
-        <img src="/images/codacy-overview.png"  alt="codacy-overview"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
+<figure>
+    <img src="/images/codacy-overview.png"
+         alt="codacy-overview"/> 
+</figure>
 
 ]]></content>
         </item>
@@ -559,13 +536,10 @@ SEDCMD-strip_prefix   s/^[^{]+//g
 KV_MODE               json</code></pre></div>
 <p>This results in the following dashboard 🧐.</p>
 
-
-    <figure class="center" >
-        <img src="/images/jamf-to-splunk.png"  alt="Jamf "   style="border-radius: 8px;"  />
-
-        
-    </figure>
-
+<figure>
+    <img src="/images/jamf-to-splunk.png"
+         alt="Jamf &lt;3 Splunk"/> 
+</figure>
 
 ]]></content>
         </item>

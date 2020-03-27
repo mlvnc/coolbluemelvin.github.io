@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Melvin Cornelissen ">
 <meta name="description" content="From Hugo for Github Pages Recently I&amp;rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&amp;rsquo;s not the way to go so instead I&amp;rsquo;ve been building a deployment pipeline using Wercker.
-TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)"/>
-<meta name="keywords" content=""/>
-<meta name="robots" content="noodp"/>
+TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)" />
+<meta name="keywords" content=", CI/CD, Hugo, Github, Wercker, Codacy" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
 <link rel="canonical" href="/posts/2019/03/hugo-wercker-and-github-pages/" />
 
 
@@ -20,20 +21,16 @@ TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)"/>
 
 
 
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Source+Code+Pro" rel="stylesheet" type="text/css">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet" type="text/css">
-
-
-<link rel="stylesheet" href="/scss/main.min.099699ab246bf26f50616f7c9f00c79d46110459d1bd727b2d07d6fc09ece082.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
 
 
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
-<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/main.min.26f29d9ec14d11344af7e9b5f40722f8c9bf60c380912c18454b2c7bbea7499a.css">
+
+
+
+
 
 <meta itemprop="name" content="Hugo, Wercker and Github Pages">
 <meta itemprop="description" content="From Hugo for Github Pages Recently I&rsquo;ve started using Hugo to build my personal homepage and blog while serving it using Github Pages. First I started out by updating my Github Pages repository using a deploy script within the Hugo file repository. Of course that&rsquo;s not the way to go so instead I&rsquo;ve been building a deployment pipeline using Wercker.
@@ -41,7 +38,7 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)">
 
 
 <meta itemprop="datePublished" content="2019-03-02T19:15:26&#43;01:00" />
-<meta itemprop="dateModified" content="2019-03-04T16:28:24&#43;01:00" />
+<meta itemprop="dateModified" content="2019-03-06T21:05:52&#43;01:00" />
 <meta itemprop="wordCount" content="289">
 
 
@@ -56,8 +53,9 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
 
 
 
-<meta property="article:published_time" content="2019-03-02 19:15:26 &#43;0100 &#43;0100" />
 
+
+    <meta property="article:published_time" content="2019-03-02 19:15:26 &#43;0100 &#43;0100" />
 
 
 
@@ -77,7 +75,11 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
         
             <span class="logo__mark">></span>
             <span class="logo__text">cd ~/</span>
-            <span class="logo__cursor"></span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
         
     </div>
 </a>
@@ -98,7 +100,7 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
                 </span>
             
 
-            <span class="theme-toggle"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <span class="theme-toggle unselectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
@@ -122,7 +124,9 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
         </div>
 
         <article>
-            <h2 class="post-title"><a href="/posts/2019/03/hugo-wercker-and-github-pages/">Hugo, Wercker and Github Pages</a></h2>
+            <h1 class="post-title">
+                <a href="/posts/2019/03/hugo-wercker-and-github-pages/">Hugo, Wercker and Github Pages</a>
+            </h1>
                 <hr />
                 <aside id="toc">
                 <div class="toc-title">Table of Contents</div>
@@ -230,58 +234,40 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
 </span><span class="w">        </span>domain<span class="p">:</span><span class="w"> </span>mlvn.io<span class="w">
 </span><span class="w">        </span>repo<span class="p">:</span><span class="w"> </span>coolbluemelvin/coolbluemelvin.github.io<span class="w">
 </span><span class="w">        </span>path<span class="p">:</span><span class="w"> </span>public</code></pre></div>
-
-    <figure class="center" >
-        <img src="/images/wercker.png"  alt="wercker"   style="border-radius: 6px;"  />
-
-        
-    </figure>
+<figure>
+    <img src="/images/wercker.png"
+         alt="wercker"/> 
+</figure>
 
 
+<figure>
+    <img src="/images/wercker-build.png"
+         alt="wercker-build"/> 
+</figure>
 
 
-    <figure class="center" >
-        <img src="/images/wercker-build.png"  alt="wercker-build"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
+<figure>
+    <img src="/images/wercker-deploy.png"
+         alt="wercker-deploy"/> 
+</figure>
 
 
-
-    <figure class="center" >
-        <img src="/images/wercker-deploy.png"  alt="wercker-deploy"   style="border-radius: 6px;"  />
-
-        
-    </figure>
+<figure>
+    <img src="/images/codacy.png"
+         alt="codacy"/> 
+</figure>
 
 
+<figure>
+    <img src="/images/codacy-checks.png"
+         alt="codacy-checks"/> 
+</figure>
 
 
-    <figure class="center" >
-        <img src="/images/codacy.png"  alt="codacy"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
-
-
-
-    <figure class="center" >
-        <img src="/images/codacy-checks.png"  alt="codacy-checks"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
-
-
-
-    <figure class="center" >
-        <img src="/images/codacy-overview.png"  alt="codacy-overview"   style="border-radius: 6px;"  />
-
-        
-    </figure>
-
+<figure>
+    <img src="/images/codacy-overview.png"
+         alt="codacy-overview"/> 
+</figure>
 
 
             </div>
@@ -297,7 +283,7 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>289 Words</p>
 
             <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2019-03-02 18:15 &#43;0000</p>
-                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/5efa3002cab2fde7500f50de96fdc982d431beae" target="_blank" rel="noopener">5efa300</a> @ 2019-03-04</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-git-commit"><circle cx="12" cy="12" r="4"></circle><line x1="1.05" y1="12" x2="7" y2="12"></line><line x1="17.01" y1="12" x2="22.96" y2="12"></line></svg><a href="https://github.com/coolbluemelvin/mlvn.io/commit/ffb8be99769b0cf425c2128972e7fe2af8a274d0" target="_blank" rel="noopener">ffb8be9</a> @ 2019-03-06</p>
         </div>
 
         
@@ -328,8 +314,6 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
                 </div>
             </div>
         
-
-        
     </main>
 
             </div>
@@ -348,11 +332,6 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
     </div>
     <div class="footer__inner">
         <div class="footer__content">
-
-        </div>
-    </div>
-    <div class="footer__inner">
-        <div class="footer__content">
             <span>Powered by <a href="http://gohugo.io">Hugo</a></span>
             <span>Made with &#10084; by <a href="https://github.com/coolbluemelvin">coolbluemelvin</a></span>
         </div>
@@ -367,8 +346,7 @@ TL;DR  Create Github repositories (Hugo &amp; Github Pages)"/>
 
 
 
-
-<script type="text/javascript" src="/js/bundle.f65a6fe80656eb86fce3f1228faa2ac0bf43b28d21eb91975f036839ed92dfd126cabb91223501623641f4ea67ac5d03882d0b8c744da38c637a1fdf8e9016c6.js" integrity="sha512-9lpv6AZW64b84/Eij6oqwL9Dso0h65GXXwNoOe2S39EmyruRIjUBYjZB9OpnrF0DiC0LjHRNo4xjeh/fjpAWxg=="></script>
+<script type="text/javascript" src="/bundle.min.8047d1b063234db7e4f910f9d54abd62686428b775f14770e6c6314980002e1d3014e6f9d5df0df37d0a5fd3a15f20b320fb949c4f014e74059de1c57eb0e40a.js" integrity="sha512-gEfRsGMjTbfk&#43;RD51Uq9YmhkKLd18Udw5sYxSYAALh0wFOb51d8N830KX9OhXyCzIPuUnE8BTnQFneHFfrDkCg=="></script>
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
