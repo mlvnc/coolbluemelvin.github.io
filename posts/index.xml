@@ -105,10 +105,9 @@ thirdmailaddress@domain.com         smtp:[1.2.3.4]</code></pre></div>
 <p>Recipient canonical map:</p>
 <div class="highlight"><pre class="chroma"><code class="language-textile" data-lang="textile">firstmailaddress@domain.com         alias123@application.com
 secondmailaddress@otherdomain.com   alias321@application.com</code></pre></div>
-<figure>
-    <img src="/images/postfix-multi.png"
-         alt="postfix-multi"/> 
-</figure>
+
+    <img src="/images/postfix-multi.png"  alt="postfix-multi"  class="center"  style="border-radius: 6px;"  />
+
 
 ]]></content>
         </item>
@@ -215,40 +214,34 @@ TL;DR  Create Github repositories (Hugo &amp;amp; Github Pages)</description>
 </span><span class="w">        </span>domain<span class="p">:</span><span class="w"> </span>mlvn.io<span class="w">
 </span><span class="w">        </span>repo<span class="p">:</span><span class="w"> </span>coolbluemelvin/coolbluemelvin.github.io<span class="w">
 </span><span class="w">        </span>path<span class="p">:</span><span class="w"> </span>public</code></pre></div>
-<figure>
-    <img src="/images/wercker.png"
-         alt="wercker"/> 
-</figure>
+
+    <img src="/images/wercker.png"  alt="wercker"  class="center"  style="border-radius: 6px;"  />
 
 
-<figure>
-    <img src="/images/wercker-build.png"
-         alt="wercker-build"/> 
-</figure>
 
 
-<figure>
-    <img src="/images/wercker-deploy.png"
-         alt="wercker-deploy"/> 
-</figure>
+    <img src="/images/wercker-build.png"  alt="wercker-build"  class="center"  style="border-radius: 6px;"  />
 
 
-<figure>
-    <img src="/images/codacy.png"
-         alt="codacy"/> 
-</figure>
 
 
-<figure>
-    <img src="/images/codacy-checks.png"
-         alt="codacy-checks"/> 
-</figure>
+    <img src="/images/wercker-deploy.png"  alt="wercker-deploy"  class="center"  style="border-radius: 6px;"  />
 
 
-<figure>
-    <img src="/images/codacy-overview.png"
-         alt="codacy-overview"/> 
-</figure>
+
+
+    <img src="/images/codacy.png"  alt="codacy"  class="center"  style="border-radius: 6px;"  />
+
+
+
+
+    <img src="/images/codacy-checks.png"  alt="codacy-checks"  class="center"  style="border-radius: 6px;"  />
+
+
+
+
+    <img src="/images/codacy-overview.png"  alt="codacy-overview"  class="center"  style="border-radius: 6px;"  />
+
 
 ]]></content>
         </item>
@@ -536,10 +529,9 @@ SEDCMD-strip_prefix   s/^[^{]+//g
 KV_MODE               json</code></pre></div>
 <p>This results in the following dashboard 🧐.</p>
 
-<figure>
-    <img src="/images/jamf-to-splunk.png"
-         alt="Jamf &lt;3 Splunk"/> 
-</figure>
+
+    <img src="/images/jamf-to-splunk.png"  alt="Jamf "  class="center"  style="border-radius: 8px;"  />
+
 
 ]]></content>
         </item>
