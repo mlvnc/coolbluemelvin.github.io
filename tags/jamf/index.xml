@@ -56,7 +56,7 @@ The script that&amp;rsquo;s performing the API call is the following.</descripti
       
       <guid>/posts/2019/02/rename-machine-script/</guid>
       <description>This post is to test the PrismJS syntax highlighting.
-#!/bin/bash  ##################### ##### Variables ##### ##################### # $LDAP_HOST = ldap host (jamf parameter 4) # $LDAP_PASSWORD = ldap password (jamf parameter 5) # $LDAP_USER = ldap user (jamf parameter 6) # $OU (jamf parameter 7) # $API_USER (jamf parameter 8) # $API_PASSWORD (jamf parameter 9) ############################ ##### Script Variables ##### ############################ # $EXISTING_RECORDS = an LDAP query to get all existing records.</description>
+#!/usr/bin/env bash  ############################ ##### Script Variables ##### ############################ # $API_USER (jamf parameter 4) # $API_PASSWORD (jamf parameter 5) CURRENTHOSTNAME=$(/usr/sbin/scutil --get ComputerName) CURRENTCOMPUTERNAME=$(/usr/sbin/scutil --get LocalHostName) CURRENTLOCALHOSTNAME=$(/usr/sbin/scutil --get HostName) API_URL=$(defaults read /Library/Preferences/com.jamfsoftware.jamf.plist jss_url) API_USER=$4 API_PASSWORD=$5 SLACKTOKEN=$6 SERIALNUMBER=$(system_profiler SPHardwareDataType | grep &amp;#39;Serial Number (system)&amp;#39; | awk &amp;#39;{print $NF}&amp;#39;) # Get Mac data from jamf (using serialnumber, requesting ONLY the extensionattributes subset) curl -s -u $API_USER:$API_PASSWORD &amp;#34;$API_URL&amp;#34;JSSResource/computers/serialnumber/$SERIALNUMBER/subset/General\&amp;amp;extension_attributes -X GET -H &amp;#34;Accept: application/xml&amp;#34; &amp;gt; /tmp/remediation-hostname.</description>
     </item>
     
   </channel>
