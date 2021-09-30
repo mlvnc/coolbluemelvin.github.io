@@ -4,7 +4,7 @@
   
   <url>
     <loc>/posts/2020/03/autopkg/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
   </url>
   
   <url>
@@ -19,27 +19,27 @@
   
   <url>
     <loc>/posts/2019/03/jamf-git2jss-and-teamcity/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2019/03/hugo-wercker-and-github-pages/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2019/03/jamf-meets-splunk/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2019/03/jamf-self-service-and-win10-vms/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
   </url>
   
   <url>
     <loc>/posts/2019/02/rename-machine-script/</loc>
-    <lastmod>2020-04-19T09:58:34+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
   </url>
   
   <url>
@@ -49,25 +49,25 @@
   
   <url>
     <loc>/tags/api/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/application/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/autopkg/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/bash/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -78,91 +78,91 @@
   
   <url>
     <loc>/tags/ci-cd/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/codacy/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/git2jss/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/github/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/hugo/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/jamf/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/management/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/posts/</loc>
-    <lastmod>2020-04-02T15:32:21+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/powershell/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/scripts/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/splunk/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/teamcity/</loc>
-    <lastmod>2019-03-07T21:45:14+01:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/wercker/</loc>
-    <lastmod>2020-04-02T15:18:35+02:00</lastmod>
+    <lastmod>2021-09-30T11:32:42+02:00</lastmod>
     <priority>0</priority>
   </url>
   
